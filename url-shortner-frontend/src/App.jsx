@@ -8,7 +8,7 @@ function App() {
   const [shortCode, setShortedUrl] = useState(null);
   async function longUrl(e){
     e.preventDefault();
-    const response=await axios.post("http://localhost:3000/addUrl",{url});
+    const response=await axios.post("https://url-shortner-client-2n6y.onrender.com/addUrl",{url});
     console.log("url added");
     setShortedUrl(response.data.shortUrl);
   }
