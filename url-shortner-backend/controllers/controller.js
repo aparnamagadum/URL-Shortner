@@ -3,7 +3,7 @@ import shortid from "shortid";
 export async function addData(req,res){
     const url=req.body.url;
     const shortCode=shortid.generate();
-    const shortUrl=`http://localhost:3000/${shortCode}`
+    const shortUrl=`https://url-shortner-client-2n6y.onrender.com/${shortCode}`
     await new urlModel({shortCode , url}).save();
     res.status(200).json({ shortUrl }); 
     console.log("data submitted");  
